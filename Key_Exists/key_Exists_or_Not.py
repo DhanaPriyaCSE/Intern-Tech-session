@@ -1,35 +1,35 @@
-my_Dict = dict()
-count_Dict_Element=int(input("Enter number of key value pair"))
-for i in range(count_Dict_Element):
+my_dict = dict()
+count_dict_element=int(input("Enter number of key value pair"))
+for i in range(count_dict_element):
     user_input = input("Enter key and value separated by commas (,): ")
     key, value = user_input.split(",")
-    my_Dict[key] = int(value)
-    print(my_Dict)
+    my_dict[key] = int(value)
+    print(my_dict)
     
-search_Key=input("Enter the key Element to Search")
+search_key=input("Enter the key Element to Search")
 
 #type 1:
-for element in my_Dict:
-    if element == search_Key:
+for element in my_dict:
+    if element == search_key:
        print("Key Exits")
     else:
         print("Key doesn't Exits")
 
 #type 2:
-if search_Key in my_Dict.keys():
+if search_key in my_dict.keys():
     print("Key Exits")
 else:
     print("Key doesn't Exits")
 
 #type 3:
-if search_Key in my_Dict:
+if search_key in my_dict:
     print("Key Exits")
 else:
     print("Key doesn't Exits")
     
 
 #type 4:python-2 only
-'''if my_Dict.has_key(search_Key):
+'''if my_dict.has_key(search_key):
     print("Key Exits")
 else:
     print("Key Not Exits")'''
@@ -37,7 +37,7 @@ else:
 
 #type 5:
 try:
-   key= my_Dict[search_Key]
+   key= my_dict[search_key]
    print("Key Exits")
 except:
    print("Key doesn't Exits")

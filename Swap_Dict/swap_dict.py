@@ -1,14 +1,14 @@
-my_Dict = dict()
-count_Dict_Element=int(input("Enter number of key value pair"))
-for i in range(count_Dict_Element):
+my_dict = dict()
+count_dict_element=int(input("Enter number of key value pair"))
+for i in range(count_dict_element):
     user_input = input("Enter key and value separated by commas (,): ")
     key, value = user_input.split(",")
     key=int(key)
-    my_Dict[key] = value
-print(my_Dict)
+    my_dict[key] = value
+print(my_dict)
     
-swap_Dict={value:key for key, value in my_Dict.items()}
-print(swap_Dict)
+swap_dict={value:key for key, value in my_dict.items()}
+print(swap_dict)
 
 
 ##Output

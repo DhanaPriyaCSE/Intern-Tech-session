@@ -2,22 +2,22 @@
 #type 1:
 #Constructing url using join concept
 
-url_Tuple=('www','Hackerrank','com','domains','python')
+url_tuple=('www','Hackerrank','com','domains','python')
 
-url_Tuple_First_Part= ".".join(url_Tuple[:3])
-url_Tuple_Second_Part= "/".join(url_Tuple[3:])
+url_tuple_first_part= ".".join(url_tuple[:3])
+url_tuple_second_part= "/".join(url_tuple[3:])
 
-print(url_Tuple_First_Part+'/'+url_Tuple_Second_Part)
+print(url_tuple_first_part+'/'+url_tuple_second_part)
 
 #type 2
 #Constructing url using list concept
 
-url_Tuple=list(tuple(input("Enter the tuple").split()))
-url_List=[]
-concate='.'.join(url_Tuple[:3]);
-url_List.append(concate);
-concate='/'.join(url_Tuple[3:])
-url_List.append(concate);
+url_tuple=list(tuple(input("Enter the tuple").split()))
+url_list=[]
+concate='.'.join(url_tuple[:3]);
+url_list.append(concate);
+concate='/'.join(url_tuple[3:])
+url_list.append(concate);
 
-converted_To_Tuple=tuple(url_List)
-print(converted_To_Tuple[0]+'/'+converted_To_Tuple[1])
+converted_to_tuple=tuple(url_list)
+print(converted_to_tuple[0]+'/'+converted_to_tuple[1])

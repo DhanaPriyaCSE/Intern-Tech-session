@@ -1,15 +1,15 @@
 
 
-user_List=["abc",[2,3,("xyz","the","avengers")],1,2,3]
-print(user_List[1][2][2])
+user_list=["abc",[2,3,("xyz","the","avengers")],1,2,3]
+print(user_list[1][2][2])
 
 #Prints avengers
 
 """
-for user_List_Elements in user_List:
-    for nested_element in user_List_Elements:
+for user_list_elements in user_list:
+    for nested_element in user_list_elements:
             print(nested_element)
             if nested_element=="avengers":
-                print(nested_Element)
+                print(nested_element)
             
 """
