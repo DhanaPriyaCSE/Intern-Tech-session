@@ -8,3 +8,4 @@ print(''.join(result))
 
 #method2
 print(''.join(reversed(sorted(list(input("Enter the number to reverse"))))))
+
