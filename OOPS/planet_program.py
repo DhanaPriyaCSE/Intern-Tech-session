@@ -25,8 +25,7 @@ def find_largest(*planets_program):
     for planet in planets_program:
         if planet.diameter == largest_size:
             print("The largest planet is "+planet.planet_name)
-
-
+            
 mercury = planet_program("Mercury",4879,0,"88 days")
 venus = planet_program("Venus",12100,0,"225 days")
 earth = planet_program("Earth",12755,1,"365 days")
@@ -40,6 +39,5 @@ neptune = planet_program("Neptune",49529,14,"165 earth years")
 print(neptune.radius())
 print(jupiter.find_days())
 
-#large_one=max(mercury.diameter,venus.diameter,earth.diameter,mars.diameter,jupiter.diameter,saturn.diameter,uranus.diameter,neptune.diameter)
 find_largest(mercury,venus,earth,mars,jupiter,saturn,uranus,neptune)
     

@@ -26,10 +26,11 @@ time2=input("Enter the time").split()
 time1_min=time_conversion(int(time1[0]),int(time1[3]))
 time2_min=time_conversion(int(time2[0]),int(time2[3]))
 
-add=time_conversion.add(time1_min,time2_min)
-time_conversion.Convert_time(add)
+add=time1_min.add(time2_min)
+time1_min.Convert_time(add)
 
-sub=time_conversion.sub(time1_min,time2_min)
-time_conversion.Convert_time(sub)
 
-print('The Total time in miutes:',time_conversion.add)
+sub=time1_min.sub(time2_min)
+time1_min.Convert_time(sub)
+
+print('The Total time in miutes:',time1_min.add)
