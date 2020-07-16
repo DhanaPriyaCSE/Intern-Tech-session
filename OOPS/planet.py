@@ -19,13 +19,8 @@ class planet_program:
 
 def find_largest(*planets_program):
     for planet in planets_program:
-        if planets_program.diameter == large_one:
-            print("The largest planet is "+planets_program.name)
-
-
-    
- 
-
+        if planet.diameter == large_one:
+            print("The largest planet is "+planet.planet_name)
 
 
 mercury = planet_program("Mercury",4879,0,"88 days")
