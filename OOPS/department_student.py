@@ -44,7 +44,6 @@ else:
 '''
 output
 
-
 Enter the any one of the department name from below 
  CSE 	 ECE 	 IT: 
 cse
@@ -54,6 +53,7 @@ Manisha
 Bharathi
 The morethan 3 subject choosen department name CSE
 The overlapping subjects are: {'CNS', 'OS', 'PDS'}
+
 
 '''
 

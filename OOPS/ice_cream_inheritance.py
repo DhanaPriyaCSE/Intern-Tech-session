@@ -20,7 +20,7 @@ class IceCream:
 
 
 
-class TotalCost(IceCream):
+class Chocolate(IceCream):
     def __init__(self,i_type,i_flavor,i_topping,quantity):
         self.i_type=i_type
         self.i_flavor=i_flavor
@@ -32,11 +32,11 @@ class TotalCost(IceCream):
          i_flavor=0
          i_topping=0
          total_cost=0
-         if i_type in icecream_type and i_flavour in icecream_flavour and i_topping in icecream_toppings:
-            total_cost=(icecream_type[i_type]+icecream_flavour[i_flavour]+icecream_toppings[i_topping])*quantity
+         if self.i_type in self.icecream_type and self.i_flavor in self.icecream_flavour and self.i_topping in self.icecream_toppings:
+            total_cost=(self.icecream_type[self.i_type]+self.icecream_flavour[self.i_flavor]+self.icecream_toppings[self.i_topping])*quantity
          else:
             print("Enter Proper Input")
-         return("The total cost is:",total_cost)
+         print("The total cost is:",total_cost)
          
 '''
 icecream_type={'stick':60,'cone':40,'cup':20}
@@ -53,7 +53,7 @@ itopping=input("Enter the Topping of icream:")
 quantity=int(input("Enter the Quantity:"))
 
 
-cream=TotalCost(itype,iflavour,itopping,quantity)
+cream=Chocolate(itype,iflavour,itopping,quantity)
 cream.total_cost()
 
 
