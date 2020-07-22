@@ -18,8 +18,6 @@ class IceCream:
             print(topping)
         print("______--****--_______\n")
 
-
-
 class Chocolate(IceCream):
     def __init__(self,i_type,i_flavor,i_topping,quantity):
         self.i_type=i_type
@@ -27,6 +25,7 @@ class Chocolate(IceCream):
         self.i_topping=i_topping
         self.quantity=quantity
         super().__init__()
+        
     def total_cost(self):
          i_type=0
          i_flavor=0
@@ -37,12 +36,6 @@ class Chocolate(IceCream):
          else:
             print("Enter Proper Input")
          print("The total cost is:",total_cost)
-         
-'''
-icecream_type={'stick':60,'cone':40,'cup':20}
-icecream_flavour={'chocolate':60,'venila':50,'strawberry':30}
-icecream_toppings={'choco chips':30,'caramel':40,'nuts':20}
-'''
 
 ice=IceCream()
 ice.print_menu()
@@ -51,7 +44,6 @@ itype=input("Enter the type of icream:")
 iflavour=input("Enter the flavour of icream:")
 itopping=input("Enter the Topping of icream:")
 quantity=int(input("Enter the Quantity:"))
-
 
 cream=Chocolate(itype,iflavour,itopping,quantity)
 cream.total_cost()
