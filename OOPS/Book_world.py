@@ -26,7 +26,7 @@ def total_number_of_book(books,given_author):
 def affortable_price_books(books):
     print("Book name \t Author Name")
     for book in books:
-        if book.book_price <1000:
+        if book.book_price < 1000:
             print(book.book_name+"\t\t "+book.author.author_name)
 
 def print_author_name(books):
@@ -42,9 +42,9 @@ scala = Book("scala",1500,"Martin Odersky",61,"German")
 java = Book("Java",800,"James Gosling",65,"Canadian")
 c = Book("C",1999,"Dennis Ritche",79,"American")
 c_plus_plus = Book("C++",1499,"Bjarne Stroustrup",69,"Danish")
-generic_java = Book("Generic Java",599,"Martin Odersky",61,"German")
+generic_java = Book("Generic Java",500,"Martin Odersky",61,"German")
 
-books =[python,scala,c,c_plus_plus,generic_java]
+books =[python,scala,c,java,c_plus_plus,generic_java]
 
 print("Total price of Books:",book_total_price(books))
 
@@ -68,6 +68,7 @@ Enter the author name to get number of books written by author:Guido van rossum
 Total number of book written by Guido van rossum is :1
 Book name 	 Author Name
 Python		 Guido van rossum
+Java             James Gosling
 Generic Java	 Martin Odersky
 """
 
