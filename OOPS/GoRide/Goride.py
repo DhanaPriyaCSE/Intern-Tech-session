@@ -31,7 +31,7 @@ def registration_driver():
         if re.match(r"[A-Za-z]",driver_name):
             break
         else:
-            print("you are not eligible")
+            print("Enter Name with Letters")
     while True:
         driver_age=input("Enter the your Age:")
         if re.match(r"(2)[0-9]",driver_age):
@@ -52,9 +52,6 @@ def registration_driver():
         else:
             print("Enter Valid Expiry date")
     
-
-    
-
     return driver_name,driver_age,driver_license,driver_license_validity
 
 def registration_car():
