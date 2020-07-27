@@ -1,4 +1,4 @@
-class Basic:
+wclass Basic:
     def __init__(self,x=20,y=8):
         self.x=x
         self.y=y
