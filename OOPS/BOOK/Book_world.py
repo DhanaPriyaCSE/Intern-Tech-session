@@ -10,6 +10,17 @@ class Book:
         self.book_price=book_price
         self.author=Author(author_name,author_age,author_nationality)
 
+class BookWorld:
+    def __init__(self,books):
+        self.books=books
+        
+    def affortable_price_books(self):
+        print("Book name \t Author Name")
+        for book in books:
+            if book.book_price < 1000:
+                print(book.book_name+"\t\t "+book.author.author_name)
+        
+
 def book_total_price(books):
         total_price=0
         for book in books:
@@ -23,11 +34,6 @@ def total_number_of_book(books,given_author):
              book_count+=1     
      return(book_count)
 
-def affortable_price_books(books):
-    print("Book name \t Author Name")
-    for book in books:
-        if book.book_price < 1000:
-            print(book.book_name+"\t\t "+book.author.author_name)
 
 def print_author_name(books):
     author=[]
@@ -55,7 +61,10 @@ given_author=input("\nEnter the author name to get number of books written by au
 
 print("\nTotal number of book written by "+given_author+" is :"+str(total_number_of_book(books,given_author)))
 
-affortable_price_books(books)
+#affortable_price_books(books)
+
+bookworld=BookWorld(books)
+bookworld.affortable_price_books()
 
 """
 Total price of Books: 6596
