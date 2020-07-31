@@ -24,11 +24,13 @@ create table tblvehicles(category varchar not null,
 
 tblrides:
 
-create table tblrides(  rideid int not null primary key,
+create table tblrides(  rideid int not null ,
+			category varchar not null,
 			vehicleNumber varchar not null,
 			minrange int not null,
 			maxrange int not null,
 			priceWidAc int not null,
 			priceWidNonAC int not null,
 			FOREIGN KEY (vehicleNumber) REFERENCES tblvehicles(vehicleNumber)
+			primary key(rideid,category)
 			)					
