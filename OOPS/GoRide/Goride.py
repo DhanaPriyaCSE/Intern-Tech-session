@@ -23,7 +23,7 @@ class Car:
     def get_car_details(self):
         return (self.catogory,self.car_number,self.car_color,self.car_company,self.car_model)
 
-def registration_driver():
+def goride_registration():
     print(" Welcome to GoRide!!!")
     print("\n....*** Driver Registration ***....")
     while True:
@@ -54,7 +54,6 @@ def registration_driver():
     
     return driver_name,driver_age,driver_license,driver_license_validity
 
-def registration_car():
     print("....*** Car Registration ***....")
     while True:
         car_category=input("\nEnter the car Category(micro or XL:)")
@@ -71,8 +70,10 @@ def registration_car():
     car_color=input("Enter the Car Color:")
     car_company=input("Enter the Car Company:")
     car_model=input("Enter the car model:")
+    drivers_detail=Driver(driver_name,driver_age,driver_license,driver_license_validity)
+    cars_detail=Car(car_category,car_number,car_color,car_company,car_model)
 
-    return car_category,car_number,car_color,car_company,car_model
+    return drivers_detail,cars_detail
 
 
 def store_registration_details(drivers,cars):
@@ -83,24 +84,10 @@ def store_registration_details(drivers,cars):
     return registration_detail
 
 
-'''
-    for driver in drivers:
-        if driver_license==driver.driver_license:
-                print("license_number already exists")
-        else:
-                print("Register Sucessfull");
-    
-'''
 
-
-(driver_name,driver_age,driver_license,driver_license_validity)=(registration_driver())
-(car_category,car_number,car_color,car_company,car_model)=(registration_car())
-
-drivers=Driver(driver_name,driver_age,driver_license,driver_license_validity)
-cars=Car(car_category,car_number,car_color,car_company,car_model)
-
+drivers_detail,cars_detail=goride_registration()
                 
-store_registration_details(drivers,cars)
+store_registration_details(drivers_detail,cars_detail)
 
 '''
  Welcome to GoRide!!!
