@@ -83,15 +83,6 @@ def store_registration_details(drivers,cars):
     return registration_detail
 
 
-'''
-    for driver in drivers:
-        if driver_license==driver.driver_license:
-                print("license_number already exists")
-        else:
-                print("Register Sucessfull");
-    
-'''
-
 
 (driver_name,driver_age,driver_license,driver_license_validity)=(registration_driver())
 (car_category,car_number,car_color,car_company,car_model)=(registration_car())
