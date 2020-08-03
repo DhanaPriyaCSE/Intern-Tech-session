@@ -25,7 +25,7 @@ create table Goride.tblvehicles(vehicleId int AUTO_INCREMENT primary key,
 				vehicleNumber varchar unique Key,
 				color varchar not null,
 				model varchar not null,
-				vehicleTypeId int Foreign key References tblDriverVehicleType(vehicleTypeId )				
+				vehicleTypeId int Foreign key References tblDriverVehicleTypes(vehicleTypeId )				
 			);
 
 tblvehicleCompanies:
@@ -40,7 +40,7 @@ create table Goride.tblprices(priceID int AUTO_INCREMENT primary key,
 			     non_acPrice int not null,
 			     min_range int not null,
 			     max_range int not null,
-			     vehicleTypeId int Foreign key References tblDriverVehicleType(vehicleTypeId )					
+			     vehicleTypeId int Foreign key References tblDriverVehicleTypes(vehicleTypeId )					
 			     );
 
 tblbookings:
