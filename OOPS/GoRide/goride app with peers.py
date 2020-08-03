@@ -9,7 +9,7 @@ class Driver:
         self.validity_date=validity_date
 
     def get_driver_detail(self):
-        self.driver_detail="Driver name is "+self.name+", Age is "+str(self.age)+",license number is "+self.license_num+" and validity period is "+self.validity_date
+        self.driver_detail="Driver name is "+self.name+"\n Age is "+str(self.age)+"\n license number is "+self.license_num+" and\n validity period is "+self.validity_date
         return self.driver_detail
 
 class Car:
@@ -24,7 +24,7 @@ class Car:
         self.company=company
         self.model=model
     def get_car_detail(self):
-        self.car_details="Car category is "+self.category+", Number is "+self.number+",colour is "+self.colour+", Company is "+self.company+" and model is "+self.model
+        self.car_details="Car category is "+self.category+"\n Number is "+self.number+"\n colour is "+self.colour+"\n Company is "+self.company+" and\n model is "+self.model
         return self.car_details
 
 
@@ -116,8 +116,15 @@ Enter the car model: a5
 
 Successfully registered!!!
 
-Driver name is priya, Age is 23,license number is TN1420110062672 and validity period is 06-02-2022
+Driver name is priya
+Age is 23
+license number is TN1420110062672 and
+validity period is 06-02-2022
 
-Car category is micro, Number is TN 01 PA 6545,colour is black, Company is aadi and model is a5
+Car category is micro
+Number is TN 01 PA 6545
+colour is black
+Company is aadi and
+model is a5
 
 '''

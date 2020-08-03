@@ -1,47 +1,53 @@
-
 create database Goride;
 
 create schema Goride;
 
 tblDrivers:
 
-create table Goride.tblDrivers(name varchar not null,
+create table Goride.tblDrivers(
+			driverId int AUTO_INCREMENT primary key,
+			name varchar not null,
  			age int not null,
-			licenseNumber varchar not null primary key,
+			licenseNumber varchar not null unique key,
 			validityPeriod date not null);
+
+tblDriverVehicleType:
+
+create table Goride.tblDriverVehicleType(
+			vehicleTypeId int AUTO_INCREMENT primary key,
+			driverId  int Foreign key References tblDrivers(driverId),
+			categoryName varchar not null  
+			);
 
 tblvehicles:
 
-create table Goride.tblvehicles(category varchar not null,
-			vehicleNumber varchar not null primary key,
-			color varchar null,
-			company varchar not null ,
-			model varchar not null,
-			maximumPPL int not null,
-			licensenumber varchar,
-			FOREIGN KEY (licensenumber) REFERENCES tbldrivers(licensenumber)
-			)
+create table Goride.tblvehicles(vehicleId int AUTO_INCREMENT primary key, 			
+				vehicleNumber varchar unique Key,
+				color varchar not null,
+				model varchar not null,
+				vehicleTypeId int Foreign key References tblDriverVehicleType(vehicleTypeId )				
+			);
 
-tblrides:
+tblvehicleCompany:
+create table Goride.tblvehicleCompany(comapnyId int AUTO_INCREMENT primary key, 
+				      companyName varchar not null,
+				      vehicleId int Foreign key References tblvehicles(vehicleId )
+				     );
 
-create table Goride.tblrides(rideid int not null primary key AUTO_INCREMENT,
-			category varchar not null,
-			vehicleNumber varchar not null,
-			minrange int not null,
-			maxrange int not null,
-			priceWidAc int not null,
-			priceWidNonAC int not null,
-			ac_r_not varchar not null,
-			FOREIGN KEY (vehicleNumber) REFERENCES tblvehicles(vehicleNumber)
-			
-			)	
+tblPrice:
+create table Goride.tblprice(priceID int AUTO_INCREMENT primary key,
+			     acPrice int not null,
+			     non_acPrice int not null,
+			     min_range int not null,
+			     max_range int not null,
+			     vehicleTypeId int Foreign key References tblDriverVehicleType(vehicleTypeId )					
+			     );
 
 tblbookings:
 
 create table Goride.tblbookings(bookingid int not null primary key AUTO_INCREMENT,
 				selecetedCategory varchar not null,
 				ac_r_not varchar not null,
-				
-)
-
-				
+				price int not null,
+				range int not null,
+				);
