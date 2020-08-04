@@ -15,7 +15,6 @@ tblDriverVehicleTypes:
 
 create table Goride.tblDriverVehicleTypes(
 			vehicleTypeId int AUTO_INCREMENT primary key,
-			driverId  int Foreign key References tblDrivers(driverId),
 			categoryName varchar not null  
 			);
 
@@ -25,6 +24,7 @@ create table Goride.tblvehicles(vehicleId int AUTO_INCREMENT primary key,
 				vehicleNumber varchar unique Key,
 				color varchar not null,
 				model varchar not null,
+				driverId  int Foreign key References tblDrivers(driverId),
 				vehicleTypeId int Foreign key References tblDriverVehicleTypes(vehicleTypeId )				
 			);
 
