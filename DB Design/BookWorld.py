@@ -20,7 +20,7 @@ def new_book():
     if request.method == 'POST':
         bookName = request.form['bookName']
         bookPrice = request.form['bookPrice']
-        db.execute("INSERT INTO book.tblbookdetails(book_name,book_price) VALUES('{}','{}')".format(bookName,bookPrice))
+        db.execute("INSERT INTO book.tblbookdetails(bookName,bookPrice) VALUES('{}','{}')".format(bookName,bookPrice))
         return 'New book inserted'
   
 
