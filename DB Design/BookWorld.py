@@ -15,7 +15,7 @@ def get_books():
     result = [dict(row) for row in books]
     return jsonify(result)
   
-@app.route('/newbook', methods=['GET', 'POST'])
+@app.route('/newbook', methods=['POST'])
 def new_book():
     if request.method == 'POST':
         bookName = request.form['bookName']
