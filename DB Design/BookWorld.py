@@ -4,7 +4,6 @@ app = Flask(__name__)
 DATABASE_URL = "postgres+psycopg2://postgres:priya@localhost/Bookworld"
 db = create_engine(DATABASE_URL)
 
-
 @app.route("/")
 def home():
   return "Welcome to !! <h1>Priya Book Store</h1>"
@@ -23,7 +22,6 @@ def new_book():
         db.execute("INSERT INTO book.tblbookdetails(bookName,bookPrice) VALUES('{}','{}')".format(bookName,bookPrice))
         return 'New book inserted'
   
-
 @app.route("/books/<name>/<price>")
 def book(name,price):
   return f"book Name:{name},book price is:{price}"
