@@ -6,7 +6,7 @@ db = create_engine(DATABASE_URL)
 
 @app.route("/")
 def home():
-  return "Welcome to !! <h1>Priya Book Store</h1>"
+  return "Welcome to !! <h1>Priya Store</h1>"    
 
 @app.route('/books',methods=['GET'])
 def get_books():
@@ -17,9 +17,9 @@ def get_books():
 @app.route('/newbook', methods=['POST'])
 def new_book():
     if request.method == 'POST':
-        bookName = request.form['bookName']
-        bookPrice = request.form['bookPrice']
-        db.execute("INSERT INTO book.tblbookdetails(bookName,bookPrice) VALUES('{}','{}')".format(bookName,bookPrice))
+        bookname = request.form['name']
+        bookprice = request.form['price']
+        db.execute("INSERT INTO book.tblbookdetails(bookid,bookname,bookprice) VALUES('{}','{}','{}')".format(5,bookname,bookprice))
         return 'New book inserted'
   
 @app.route("/books/<name>/<price>")
